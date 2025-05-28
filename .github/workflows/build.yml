@@ -20,6 +20,4 @@ jobs:
         distribution: 'temurin'
 
     - name: Build & Deploy to CloudHub
-      run: mvn clean deploy -DmuleDeploy \
-        -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} \
-        -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }}
+      run: mvn clean deploy -DmuleDeploy -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }}
